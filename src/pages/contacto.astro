@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contacto | MINNO Hermosillo">
+  <header class="hero">
+    <div class="emoji">💌</div>
+    <h1>Contacto</h1>
+    <p class="frase">¿Dudas, pedidos o eventos? Escríbenos.</p>
+  </header>
+
+  <main>
+    <section class="contacto">
+      <form class="form" onsubmit="event.preventDefault(); this.querySelector('.ok').hidden = false; this.reset();">
+        <label>Nombre <input type="text" name="nombre" required /></label>
+        <label>Correo <input type="email" name="correo" required /></label>
+        <label>Mensaje <textarea name="mensaje" rows="5" required></textarea></label>
+        <button class="btn" type="submit">Enviar</button>
+        <p class="ok" hidden>¡Gracias! (Formulario de prueba, aún no envía mensajes.)</p>
+      </form>
+      <p><a href="/">← Volver al inicio</a></p>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .form { display: grid; gap: 1rem; max-width: 480px; margin: 1.5rem auto; text-align: left; }
+  label { display: grid; gap: .3rem; font-weight: 600; }
+  input, textarea { padding: .7rem; border: 2px solid var(--rosa); border-radius: 12px; font: inherit; background: white; color: var(--cafe); }
+  .form .btn { border: 0; cursor: pointer; justify-self: start; }
+  .ok { color: var(--cafe); background: var(--rosa-claro); padding: .6rem 1rem; border-radius: 12px; }
+</style>
