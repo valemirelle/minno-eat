@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { minno, toppings } from '../data/minno';
+
+const waLink = minno.whatsapp ? `https://wa.me/${minno.whatsapp}` : '';
+const igLink = minno.instagram ? `https://instagram.com/${minno.instagram}` : '';
+const hayContacto = minno.instagram || minno.whatsapp || minno.direccion || minno.horario;
+---
+
+<Layout title={`${minno.nombre} ${minno.apellido} | ${minno.ciudad}`}>
+  <header class="hero">
+    <div class="emoji">🍦</div>
+    <h1><span>M</span>INNO</h1>
+    <p class="sub">{minno.apellido}</p>
+    <p class="frase">{minno.frase}</p>
+    <p class="ciudad">📍 {minno.ciudad}</p>
+    {igLink && <a class="btn" href={igLink} target="_blank" rel="noopener">Síguenos en Instagram</a>}
+  </header>
+
+  <main>
+    <section id="toppings">
+      <h2>Toppings espectaculares</h2>
+      <div class="grid">
+        {toppings.map((t) => (
+          <div class="card"><span class="e">{t.emoji}</span>{t.nombre}</div>
+        ))}
+      </div>
+    </section>
+
+    {hayContacto && (
+      <section id="contacto" class="contacto">
+        <h2>Visítanos</h2>
+        {minno.direccion && <p>📍 {minno.direccion}</p>}
+        {minno.horario && <p>🕒 {minno.horario}</p>}
+        {waLink && <p>💬 <a href={waLink}>Escríbenos por WhatsApp</a></p>}
+        {igLink && <p>📸 <a href={igLink}>@{minno.instagram}</a></p>}
+      </section>
+    )}
+  </main>
+
+  <footer>© {new Date().getFullYear()} {minno.nombre} {minno.apellido} · {minno.ciudad}</footer>
+</Layout>
