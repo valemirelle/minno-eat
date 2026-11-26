@@ -23,7 +23,7 @@ main { max-width: 960px; margin: 0 auto; padding: 0 1.25rem; }
   background: var(--rosa-claro);
   border-radius: 0 0 48px 48px;
 }
-.hero .emoji { font-size: 4rem; }
+.hero .helado { display: block; width: 180px; height: auto; margin: 0 auto .5rem; }
 .hero h1 { font-size: clamp(2.8rem, 10vw, 5rem); letter-spacing: 0.08em; }
 .hero h1 span { color: var(--rosa); }
 .hero .sub { font-size: 1.1rem; letter-spacing: 0.2em; text-transform: uppercase; }

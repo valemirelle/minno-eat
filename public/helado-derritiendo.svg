@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 310" role="img" aria-label="Helado suave derritiéndose">
+  <style>
+    .gota { animation: cae 2.4s ease-in infinite; }
+    @keyframes cae {
+      0%   { transform: translateY(0);    opacity: 1; }
+      85%  { transform: translateY(62px); opacity: 1; }
+      100% { transform: translateY(66px); opacity: 0; }
+    }
+  </style>
+  <!-- charco -->
+  <ellipse cx="120" cy="296" rx="78" ry="10" fill="#ffc2d6"/>
+  <ellipse cx="120" cy="294" rx="52" ry="6" fill="#ffd9e6"/>
+  <!-- cono -->
+  <polygon points="66,150 174,150 120,290" fill="#f2b56b"/>
+  <g stroke="#d9954a" stroke-width="3" opacity=".7">
+    <line x1="86" y1="150" x2="140" y2="262"/>
+    <line x1="106" y1="150" x2="150" y2="241"/>
+    <line x1="126" y1="150" x2="160" y2="220"/>
+    <line x1="154" y1="150" x2="100" y2="262"/>
+    <line x1="134" y1="150" x2="90" y2="241"/>
+    <line x1="114" y1="150" x2="80" y2="220"/>
+  </g>
+  <!-- chorreones (detrás del helado) -->
+  <rect x="64" y="135" width="18" height="52" rx="9" fill="#ff8fb1"/>
+  <rect x="108" y="135" width="20" height="82" rx="10" fill="#ff8fb1"/>
+  <rect x="156" y="135" width="18" height="64" rx="9" fill="#ff8fb1"/>
+  <!-- helado suave en espiral -->
+  <path d="M52 152 C40 128 56 112 76 110 C72 90 94 78 110 82 C110 62 136 54 150 68 C168 62 186 78 178 98 C198 106 200 132 188 152 Z" fill="#ff8fb1"/>
+  <path d="M62 140 C80 148 160 148 180 140" fill="none" stroke="#ff6f9c" stroke-width="5" stroke-linecap="round" opacity=".6"/>
+  <path d="M74 112 C100 122 150 122 176 100" fill="none" stroke="#ff6f9c" stroke-width="5" stroke-linecap="round" opacity=".6"/>
+  <path d="M100 84 C118 90 140 88 150 70" fill="none" stroke="#ff6f9c" stroke-width="5" stroke-linecap="round" opacity=".6"/>
+  <!-- brillo -->
+  <ellipse cx="92" cy="112" rx="10" ry="5" fill="#fff" opacity=".55" transform="rotate(-25 92 112)"/>
+  <!-- chispas -->
+  <circle cx="108" cy="130" r="3" fill="#fff8f1"/>
+  <circle cx="150" cy="94" r="3" fill="#f2b56b"/>
+  <circle cx="82" cy="136" r="3" fill="#4a2c2a"/>
+  <circle cx="168" cy="126" r="3" fill="#fff8f1"/>
+  <!-- gota que cae -->
+  <path class="gota" d="M165 205 C165 205 157 217 157 223 C157 228 161 231 165 231 C169 231 173 228 173 223 C173 217 165 205 165 205 Z" fill="#ff8fb1"/>
+</svg>
